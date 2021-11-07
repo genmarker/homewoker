@@ -38,7 +38,7 @@ print("Годовой процент по депозиту составляет"
 var someyear: Int = 5
 var sum: Double = ((130000*perc*(Double(someyear)*365)/365)/100)+dep
 print("Сумарная выплата через", someyear, "лет составит", sum, "рублей, где сумма процентов за", someyear, "лет составляет", sum - dep, "рублей")
-
+//
 
 
 
