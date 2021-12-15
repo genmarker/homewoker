@@ -7,26 +7,30 @@ struct SportCar {
         case nissan(nisssanValue: carValue)
         case lada(ladaValue: carValue)
         enum carValue {
-            case year(year: Int, howy: String)
+            case year(year: Int)
             case bagageValue(bValueValue: Int, valueB: String)
             case openWindow(openWValue: Bool, opString: String)
             case startEngine(sEngineValue: Bool, sEstring: String)
-            case fillBagage(fillBValue: Bool, fillValue: String)
+            case fillBagage(fillBValue: Bool)
         }
     }
-}
+    mutating func opelfunc(automarka: marka){
+        let ismarka = marka.bmw(bmwValue: .year(year: 1995))
+        print(ismarka)
+       
+        }
+    }
 
-var markaBmw = SportCar.marka.bmw(bmwValue: .year(year: 1999, howy: "года"))
-markaBmw.self = .bmw(bmwValue: .startEngine(sEngineValue: true, sEstring: "engine true"))
+var markaBmw = SportCar.marka.bmw(bmwValue: .year(year: 1999))
+markaBmw.self = .bmw(bmwValue: .startEngine(sEngineValue: true, sEstring: "engine start"))
 markaBmw.self = .bmw(bmwValue: .openWindow(openWValue: true, opString: "windows open"))
-markaBmw.self = .bmw(bmwValue: .fillBagage(fillBValue: true, fillValue: "bagageFill"))
+markaBmw.self = .bmw(bmwValue: .fillBagage(fillBValue: true))
 markaBmw.self = .bmw(bmwValue: .bagageValue(bValueValue: 150, valueB: "Litr"))
 
-
-var markaOpel = SportCar.marka.opel(opelValue: .year(year: 2012, howy: "Года"))
+var markaOpel = SportCar.marka.opel(opelValue: .year(year: 2012))
 markaOpel.self = .opel(opelValue: .startEngine(sEngineValue: false, sEstring: "Engine not start"))
 markaOpel.self = .opel(opelValue: .openWindow(openWValue: false, opString: "Windows Close"))
-markaOpel.self = .opel(opelValue: .fillBagage(fillBValue: false, fillValue: "Bagage empty"))
+markaOpel.self = .opel(opelValue: .fillBagage(fillBValue: false))
 markaOpel.self = .opel(opelValue: .bagageValue(bValueValue: 390, valueB: "Litr"))
 
 //решение задач на примере грузовиков простым перечислением (можно решить и первое таким способом, но я хотел узнать можно ли другим способом)
